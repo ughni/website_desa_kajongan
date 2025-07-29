@@ -1,8 +1,8 @@
-import KegiatanPengumuman from "../components/Event";
-import HeroSection from "../components/HeroSection";
-import HeroRT from "../components/IzinAdmin";
-import ProfilDesa from "../components/ProfilDesa";
-import StrukturPerangkatDesa from "../components/StrukturJabatan";
+import KegiatanPengumuman from "../components/EventComponent";
+import HeroSection from "../Components/HeroSectionComponent";
+import HeroRT from "../Components/IzinAdminComponent";
+import ProfilDesa from "../Components/ProfilDesaComponent";
+import StrukturPerangkatDesa from "../Components/StrukturJabatanComponent";
 
 export default function Home() {
   return (

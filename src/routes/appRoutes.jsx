@@ -1,8 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import AjukanSurat from "../pages/AjukanSurat";
-import AdminDashboard from "../pages/adminDashboard";
-import ProfilDesa from "../components/ProfilDesa";
+import Home from "../Pages/HomePage";
+import AjukanSurat from "../Pages/AjukanSuratPage";
+import AdminDashboard from "../Pages/AdminDashboardPage";
 export default function AppRoutes() {
   return (
     <Routes>

@@ -55,7 +55,7 @@ export default function Footer() {
               <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors" aria-label="Facebook">
                 <FaFacebook size={24} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/karangtaruna_desa_kajongan/" className="text-gray-400 hover:text-cyan-400 transition-colors" aria-label="Instagram">
                 <FaInstagram size={24} />
               </a>
               <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors" aria-label="YouTube">
