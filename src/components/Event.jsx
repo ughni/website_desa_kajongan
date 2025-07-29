@@ -1,8 +1,8 @@
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
 // GANTI DENGAN DATA ASLI DARI DESA KAJONGAN
+// Di aplikasi nyata, data ini akan diambil dari database/API.
 const dummyData = [
   {
     id: 1,
@@ -54,154 +54,51 @@ const dummyData = [
   }
 ];
 
-// Variasi animasi untuk kartu
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
-  },
-  hover: {
-    y: -10,
-    transition: {
-      duration: 0.3,
-      ease: "easeOut"
-    }
-  }
-};
-
-// Variasi animasi untuk container
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2
-    }
-  }
-};
-
 export default function KegiatanPengumuman() {
   return (
     <section className="bg-white py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header Section dengan animasi */}
-        <motion.div 
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <motion.h2 
-            className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-          >
+        {/* Header Section */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
             Informasi Terbaru dari Desa
-          </motion.h2>
-          <motion.p 
-            className="mt-4 max-w-2xl mx-auto text-lg text-gray-600"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-          >
+          </h2>
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
             Agenda kegiatan dan pengumuman penting untuk warga Desa Kajongan.
-          </motion.p>
-        </motion.div>
+          </p>
+        </div>
 
-        {/* Grid untuk Kartu dengan animasi stagger */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-        >
-          {dummyData.map((item, index) => (
-            <motion.div 
-              key={item.id}
-              variants={cardVariants}
-              whileHover="hover"
-              className="flex flex-col bg-gray-50 rounded-lg shadow-lg overflow-hidden"
-              custom={index}
-            >
+        {/* Grid untuk Kartu */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {dummyData.map((item) => (
+            <div key={item.id} className="flex flex-col bg-gray-50 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:-translate-y-2">
               <div className="p-6 flex-grow">
-                {/* Label/Tag Dinamis dengan animasi */}
-                <motion.span 
-                  className={`inline-block px-3 py-1 text-xs font-semibold tracking-wider uppercase rounded-full mb-4 ${
-                    item.tipe === 'Kegiatan' ? 'bg-blue-100 text-blue-800' : 'bg-yellow-100 text-yellow-800'
-                  }`}
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2, type: "spring" }}
-                >
+                {/* Label/Tag Dinamis */}
+                <span className={`inline-block px-3 py-1 text-xs font-semibold tracking-wider uppercase rounded-full mb-4 ${
+                  item.tipe === 'Kegiatan' ? 'bg-blue-100 text-blue-800' : 'bg-yellow-100 text-yellow-800'
+                }`}>
                   {item.tipe}
-                </motion.span>
+                </span>
 
-                <motion.p 
-                  className="text-sm text-gray-500"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 }}
-                >
-                  {item.tanggal}
-                </motion.p>
-                <motion.h3 
-                  className="mt-2 text-xl font-bold text-gray-800"
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4 }}
-                >
+                <p className="text-sm text-gray-500">{item.tanggal}</p>
+                <h3 className="mt-2 text-xl font-bold text-gray-800">
                   {item.judul}
-                </motion.h3>
-                <motion.p 
-                  className="mt-3 text-gray-600 leading-relaxed line-clamp-3"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 }}
-                >
+                </h3>
+                <p className="mt-3 text-gray-600 leading-relaxed line-clamp-3">
                   {item.deskripsi}
-                </motion.p>
+                </p>
               </div>
               
-              {/* Tombol Baca Selengkapnya dengan animasi */}
-              <motion.div 
-                className="bg-gray-100 p-4 mt-auto"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.6 }}
-              >
-                <Link 
-                  to={item.link} 
-                  className="flex items-center font-semibold text-cyan-600 hover:text-cyan-800 transition-colors"
-                >
-                  <motion.span
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className="flex items-center"
-                  >
-                    Baca Selengkapnya
-                    <FaArrowRight className="ml-2" />
-                  </motion.span>
+              {/* Tombol Baca Selengkapnya */}
+              <div className="bg-gray-100 p-4 mt-auto">
+                <Link to={item.link} className="flex items-center font-semibold text-cyan-600 hover:text-cyan-800 transition-colors">
+                  Baca Selengkapnya
+                  <FaArrowRight className="ml-2" />
                 </Link>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

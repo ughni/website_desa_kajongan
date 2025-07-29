@@ -33,15 +33,6 @@ Proyek **Website Desa Kajongan** adalah sebuah inisiatif untuk membawa administr
 
 ---
 
-## 🎨 Galeri Proyek
-
-*Ganti gambar di bawah dengan screenshot atau GIF dari proyek Anda.*
-
-| Halaman Utama (Hero Section)                       | Dashboard Admin                                      |
-| -------------------------------------------------- | ---------------------------------------------------- |
-| ![Screenshot Halaman Utama](URL_SCREENSHOT_HOME_ANDA) | ![Screenshot Dashboard Admin](URL_SCREENSHOT_ADMIN_ANDA) |
-
----
 
 ## 🛠️ Teknologi & Tools
 
@@ -65,7 +56,7 @@ Untuk menjalankan proyek ini di komputer Anda, ikuti langkah-langkah berikut:
 
 1.  **Clone repository ini:**
     ```bash
-    git clone [https://github.com/NAMA_USER_ANDA/NAMA_REPO_ANDA.git](https://github.com/NAMA_USER_ANDA/NAMA_REPO_ANDA.git)
+    git clone [https://github.com/ughni/website_desa_kajongan.git.git]https://github.com/ughni/website_desa_kajongan.git)
     ```
 
 2.  **Masuk ke direktori proyek:**
@@ -97,7 +88,7 @@ Untuk menjalankan proyek ini di komputer Anda, ikuti langkah-langkah berikut:
 Mari terhubung! Jangan ragu untuk menghubungi saya melalui platform di bawah ini.
 
 <p>
-  <a href="URL_GITHUB_ANDA" target="_blank"><img alt="Github" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
-  <a href="URL_LINKEDIN_ANDA" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-  <a href="mailto:EMAIL_ANDA"><img alt="Email" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
+  <a href="https://github.com/ughni" target="_blank"><img alt="Github" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
+  <a href="https://www.linkedin.com/in/m-mughni-69b15830b/" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+  <a href="/"><img alt="Email" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
 </p>
